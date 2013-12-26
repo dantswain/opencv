@@ -35,4 +35,7 @@ This is a manifest of the changes made to this repository vs. the repository at 
 
 The official OpenCV 2.4.7 source tarball is 81.6 MB compressed and 184
 MB decompressed. This repository is 42 MB uncompressed and about 10 MB
-compressed.
+compressed from the tarball. Unfortunatley, the repository itself is
+quite large because it still contains historical references to the
+extra files. It is therefore recommended that you use a release
+tarball.

@@ -175,15 +175,6 @@ OCV_OPTION(BUILD_FAT_JAVA_LIB       "Create fat java wrapper containing the whol
 OCV_OPTION(BUILD_ANDROID_SERVICE    "Build OpenCV Manager for Google Play" OFF IF ANDROID AND ANDROID_SOURCE_TREE )
 OCV_OPTION(BUILD_ANDROID_PACKAGE    "Build platform-specific package for Google Play" OFF IF ANDROID )
 
-# 3rd party libs
-OCV_OPTION(BUILD_ZLIB               "Build zlib from source"             WIN32 OR APPLE )
-OCV_OPTION(BUILD_TIFF               "Build libtiff from source"          WIN32 OR ANDROID OR APPLE )
-OCV_OPTION(BUILD_JASPER             "Build libjasper from source"        WIN32 OR ANDROID OR APPLE )
-OCV_OPTION(BUILD_JPEG               "Build libjpeg from source"          WIN32 OR ANDROID OR APPLE )
-OCV_OPTION(BUILD_PNG                "Build libpng from source"           WIN32 OR ANDROID OR APPLE )
-OCV_OPTION(BUILD_OPENEXR            "Build openexr from source"          WIN32 OR ANDROID OR APPLE )
-OCV_OPTION(BUILD_TBB                "Download and build TBB from source" ANDROID )
-
 # OpenCV installation options
 # ===================================================
 OCV_OPTION(INSTALL_CREATE_DISTRIB   "Change install rules to build the distribution package" OFF )
@@ -484,20 +475,9 @@ add_subdirectory(include)
 # OpenCV modules
 add_subdirectory(modules)
 
-# Generate targets for documentation
-add_subdirectory(doc)
-
-# various data that is used by cv libraries and/or demo applications.
-add_subdirectory(data)
-
 # extra applications
 if(BUILD_opencv_apps)
   add_subdirectory(apps)
-endif()
-
-# examples
-if(BUILD_EXAMPLES OR BUILD_ANDROID_EXAMPLES OR INSTALL_PYTHON_EXAMPLES)
-  add_subdirectory(samples)
 endif()
 
 if(ANDROID)

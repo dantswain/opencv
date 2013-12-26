@@ -1,23 +1,32 @@
-### OpenCV: Open Source Computer Vision Library
+# OpenCV: Open Source Computer Vision Library
+# Minimal Source Package
 
-#### Resources
+This repository is intended to provide a working source tree for the
+[OpenCV](http://opencv.org) Library with a much smaller download size
+than the official package.
 
-* Homepage: <http://opencv.org>
-* Docs: <http://docs.opencv.org>
-* Q&A forum: <http://answers.opencv.org>
-* Issue tracking: <http://code.opencv.org>
+The main use case for this repository is build and deployment systems,
+where the documentation, sample programs, and extra language bindings
+generally serve no puprpose.  If you want to learn OpenCV, it is
+highly recommended that you use the official repository and packages.
 
-#### Contributing
+## Status
 
-Please read before starting work on a pull request: <http://code.opencv.org/projects/opencv/wiki/How_to_contribute>
+I've just started working on this and it's not tested very thoroughly yet.
 
-Summary of guidelines:
+## Comparison with the official package
 
-* One pull request per issue;
-* Choose the right base branch;
-* Include tests and documentation;
-* Clean up "oops" commits before submitting;
-* Follow the coding style guide.
+This is a manifest of the changes made to this repository vs. the repository at http://github.com/itseez/opencv.
 
-[![Donate OpenCV project](http://opencv.org/wp-content/uploads/2013/07/gittip1.png)](https://www.gittip.com/OpenCV/)
-[![Donate OpenCV project](http://opencv.org/wp-content/uploads/2013/07/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?item_name=Donation+to+OpenCV&cmd=_donations&business=accountant%40opencv.org)
+### Removed from the official package
+* The entirety of the samples/ directory.
+* The entirety of the doc/ directory.
+* The entirety of the 3rdparty/ directory.
+* The entirety of the data/ directory.
+
+### Changed in this package
+* This README.md file
+
+### Size difference
+
+The official OpenCV 2.4.7 source tarball is 81.6 MB compressed and 184 MB decompressed. This repository is 42 MB uncompressed and about 20 MB compressed.

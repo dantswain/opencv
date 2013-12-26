@@ -26,6 +26,10 @@ This is a manifest of the changes made to this repository vs. the repository at 
 
 ### Changed in this package
 * This README.md file
+* CMakeLists.txt:
+    - Remove `include_subdirectory` references to samples, doc, 3rdparty, data
+    - Remove `BUILD_ZLIB`, `BUILD_TIFF`, `BUILD_JASPER`, `BUILD_JPEG`, `BUILD_PNG`, `BUILD_OPENEXR`, and `BUILD_TBB` options.
+    - Disable libwebp and openexr by default
 
 ### Size difference
 
